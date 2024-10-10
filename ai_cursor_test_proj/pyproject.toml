@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "acapella-arranger"
+version = "0.1.0"
+description = "将乐谱转换为无伴奏合唱的 AI 工具"
+authors = ["Kevin Wong <kevinchwong@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.0.1"
+music21 = "^7.1.0"
+tensorflow = "*"
+keras = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+package-mode = false

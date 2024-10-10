@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人创作乐谱转无伴奏合唱</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/midi.js/2.0.1/midi.min.js"></script>
+</head>
+<body>
+    <h1>个人创作乐谱转无伴奏合唱</h1>
+    <p>注意：本工具仅用于处理您自己创作的原创乐谱。</p>
+    <div id="result"></div>
+    <div id="player">
+        <h2>原始乐谱</h2>
+        <button id="play-input">播放输入</button>
+        <h2>无伴奏合唱版本</h2>
+        <button id="play-output">播放输出</button>
+    </div>
+    <form id="upload-form">
+        <input type="file" id="sheet-music" accept=".mscz,.musicxml,.xml,.mid,.midi" required>
+        <label for="voices">声部数量:</label>
+        <select id="voices" name="voices">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <label for="style">编曲风格:</label>
+        <select id="style" name="style">
+            <option value="classical">古典</option>
+            <option value="jazz">爵士</option>
+            <option value="pop">流行</option>
+        </select>
+        <button type="submit">转换</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
